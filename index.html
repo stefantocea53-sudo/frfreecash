@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Scrollez & Gagnez</title>
+  <title>Freecash x TikTok</title>
   <link rel="icon" href="data:," />
 
   <style>
@@ -155,239 +155,286 @@
       max-width: 430px;
       margin: 0 auto;
       min-height: 100vh;
-      padding: 14px 14px 110px;
+      padding: 14px 14px 112px;
     }
 
     .top {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+      padding-top: 4px;
     }
 
-    .brand {
+    .brand-combo {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      font-weight: 1000;
-      letter-spacing: -.03em;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 34px rgba(0,0,0,.28);
     }
 
-    .brand img {
-      width: 38px;
-      height: 38px;
-      border-radius: 13px;
+    .brand-combo img {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
       object-fit: cover;
       background: rgba(255,255,255,.08);
     }
 
-    .live {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.09);
-      color: #baffd0;
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 6px rgba(57,255,136,.12);
+    .brand-combo span {
+      color: var(--green);
+      font-size: 18px;
+      font-weight: 1000;
+      line-height: 1;
     }
 
     .hero {
-      min-height: 76vh;
+      min-height: 72vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 18px 0 22px;
+      padding: 4px 0 20px;
     }
 
-    .badge {
+    .payout-badge {
       width: fit-content;
-      margin: 0 auto 16px;
-      padding: 9px 13px;
+      margin: 0 auto 24px;
+      padding: 10px 15px;
       border-radius: 999px;
-      color: var(--yellow);
-      background: rgba(255,213,106,.13);
-      border: 1px solid rgba(255,213,106,.22);
-      font-size: 11px;
+      color: #baffd0;
+      background: rgba(57,255,136,.12);
+      border: 1px solid rgba(57,255,136,.34);
+      box-shadow: inset 0 0 20px rgba(57,255,136,.05);
+      font-size: 14px;
       font-weight: 1000;
-      text-transform: uppercase;
-      letter-spacing: .08em;
     }
 
     h1 {
       text-align: center;
-      font-size: clamp(54px, 17vw, 76px);
-      line-height: .86;
-      letter-spacing: -.075em;
+      font-size: clamp(38px, 12vw, 54px);
+      line-height: .98;
+      letter-spacing: -.065em;
       font-weight: 1000;
       margin-bottom: 18px;
     }
 
     h1 span {
-      display: block;
       color: var(--green);
       text-shadow: 0 0 30px rgba(57,255,136,.25);
     }
 
     .mini-text {
-      max-width: 310px;
+      max-width: 335px;
       margin: 0 auto 22px;
       text-align: center;
-      color: #c8d7cc;
-      font-size: 16px;
+      color: #dbe6de;
+      font-size: 17px;
       line-height: 1.45;
-      font-weight: 650;
-    }
-
-    .phone-card {
-      background:
-        radial-gradient(circle at top right, rgba(57,255,136,.22), transparent 35%),
-        linear-gradient(180deg, rgba(18,35,25,.95), rgba(8,15,10,.98));
-      border: 1px solid rgba(255,255,255,.11);
-      border-radius: 32px;
-      padding: 16px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .money-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .money-box {
-      border-radius: 22px;
-      padding: 15px 12px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .money-box strong {
-      display: block;
-      font-size: 26px;
-      line-height: 1;
-      color: var(--green);
-      margin-bottom: 6px;
-      letter-spacing: -.04em;
-    }
-
-    .money-box span {
-      color: var(--muted);
-      font-size: 12px;
       font-weight: 750;
     }
 
-    .scroll-preview {
+    .chips {
       display: grid;
-      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 0 auto 26px;
+      max-width: 350px;
     }
 
-    .task {
+    .chip {
+      min-height: 48px;
       display: flex;
       align-items: center;
-      gap: 12px;
-      min-height: 58px;
-      padding: 10px;
-      border-radius: 19px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid rgba(255,255,255,.07);
-    }
-
-    .task-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      background: rgba(57,255,136,.13);
-      color: var(--green);
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    .task div {
-      flex: 1;
-    }
-
-    .task strong {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 2px;
-    }
-
-    .task span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 650;
-    }
-
-    .task b {
-      color: var(--yellow);
-      font-size: 14px;
-      white-space: nowrap;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: #f4fff7;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: 13px;
+      font-weight: 900;
+      text-align: center;
     }
 
     .section-title {
-      margin: 24px 0 10px;
-      color: #9ab8a3;
-      text-align: center;
-      font-size: 12px;
+      margin: 22px 0 12px;
+      color: #eee9f6;
+      font-size: 13px;
       font-weight: 1000;
-      letter-spacing: .12em;
+      letter-spacing: .24em;
       text-transform: uppercase;
     }
 
-    .steps {
+    .offer-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 112px;
+      padding: 16px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.11);
+      box-shadow: 0 18px 48px rgba(0,0,0,.32);
+    }
+
+    .play {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
       display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: rgba(57,255,136,.12);
+      border: 4px solid var(--green);
+      color: #fff;
+      font-size: 20px;
+      box-shadow: 0 0 25px rgba(57,255,136,.26);
+    }
+
+    .offer-card strong {
+      display: block;
+      max-width: 205px;
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 1.12;
+      letter-spacing: -.03em;
+    }
+
+    .offer-card span {
+      color: #dbcfe0;
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 760;
+    }
+
+    .hot {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: #3a2500;
+      font-size: 11px;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .rating {
+      position: absolute;
+      right: 20px;
+      bottom: 17px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 1000;
+    }
+
+    .rating i {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    .tip-card {
+      margin-top: 18px;
+      padding: 24px 22px 19px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025)),
+        radial-gradient(circle at top left, rgba(57,255,136,.12), transparent 34%);
+      border: 1px solid rgba(156,255,188,.22);
+      overflow: hidden;
+      box-shadow: 0 18px 48px rgba(0,0,0,.30);
+    }
+
+    .tip-label {
+      color: var(--yellow);
+      font-size: 14px;
+      font-weight: 1000;
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+      margin-bottom: 18px;
+    }
+
+    .tip-card h2 {
+      font-size: 29px;
+      line-height: 1.08;
+      letter-spacing: -.055em;
+      margin-bottom: 15px;
+    }
+
+    .tip-card h2 span {
+      color: var(--yellow);
+    }
+
+    .tip-card p {
+      color: #eadff0;
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 760;
+      margin-bottom: 18px;
+    }
+
+    .rainbow {
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #39ff88, #e8ff3f, #ffbb38, #ff6b4a);
+      box-shadow: 0 0 20px rgba(57,255,136,.22);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    .step {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(255,255,255,.08);
+    .mini-step {
+      min-height: 180px;
+      padding: 18px 10px 12px;
+      border-radius: 18px;
+      text-align: center;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.10);
     }
 
-    .num {
-      width: 38px;
-      height: 38px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: rgba(57,255,136,.13);
-      color: var(--green);
-      font-weight: 1000;
-      flex-shrink: 0;
-    }
-
-    .step strong {
+    .mini-step .big {
       display: block;
-      font-size: 14px;
-      margin-bottom: 2px;
+      color: var(--green);
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 1000;
+      margin-bottom: 10px;
     }
 
-    .step span {
-      color: var(--muted);
+    .mini-step .icon {
+      display: block;
+      color: var(--green);
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .mini-step strong {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.12;
+      letter-spacing: -.035em;
+      margin-bottom: 10px;
+    }
+
+    .mini-step p {
+      color: #b8c7bd;
       font-size: 12px;
-      font-weight: 650;
+      line-height: 1.35;
+      font-weight: 700;
     }
 
     .cashout {
@@ -395,7 +442,7 @@
       justify-content: center;
       gap: 8px;
       flex-wrap: wrap;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
     .cashout span {
@@ -406,6 +453,14 @@
       color: #d7e7db;
       font-size: 12px;
       font-weight: 850;
+    }
+
+    .note {
+      margin-top: 12px;
+      color: #8fa596;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.45;
     }
 
     .sticky {
@@ -434,7 +489,9 @@
       background: linear-gradient(180deg, #67ffa3, #20d66b);
       box-shadow: 0 16px 34px rgba(32,214,107,.28);
       font-weight: 1000;
-      font-size: 17px;
+      font-size: 18px;
+      letter-spacing: -.035em;
+      text-align: center;
     }
 
     .cta small {
@@ -443,14 +500,7 @@
       font-weight: 850;
       opacity: .72;
       margin-top: 2px;
-    }
-
-    .note {
-      margin-top: 12px;
-      color: #8fa596;
-      text-align: center;
-      font-size: 11px;
-      line-height: 1.45;
+      letter-spacing: 0;
     }
 
     footer {
@@ -466,13 +516,17 @@
       color: #7f9686;
     }
 
-    @media (max-width: 360px) {
-      h1 {
-        font-size: 52px;
+    @media (max-width: 370px) {
+      .chips {
+        grid-template-columns: 1fr;
       }
 
-      .money-row {
+      .steps-grid {
         grid-template-columns: 1fr;
+      }
+
+      .mini-step {
+        min-height: auto;
       }
     }
   </style>
@@ -483,12 +537,12 @@
   <div class="age-gate" id="ageGate">
     <div class="age-box">
       <div class="age-icon">21+</div>
-      <h2>Avez-vous 21 ans ou plus ?</h2>
+      <h2>Vous avez 21 ans ou plus ?</h2>
       <p>Cette page est réservée aux visiteurs âgés de 21 ans ou plus.</p>
 
       <div class="age-actions">
         <button class="yes" id="yesBtn">Oui, j’ai 21 ans ou plus</button>
-        <button class="no" id="noBtn">Non, j’ai moins de 21 ans</button>
+        <button class="no" id="noBtn">Non, je suis plus jeune</button>
       </div>
 
       <div class="deny" id="denyMsg">
@@ -500,109 +554,84 @@
   <main class="page">
 
     <header class="top">
-      <div class="brand">
+      <div class="brand-combo">
         <img src="assets/freecash-logo.webp" alt="Freecash">
-        <span>Freecash</span>
-      </div>
-
-      <div class="live">
-        <span class="dot"></span>
-        En direct
+        <span>×</span>
+        <img src="assets/tiktok.logo.webp" alt="TikTok">
       </div>
     </header>
 
     <section class="hero">
-      <div class="badge">Nouveaux comptes 21+</div>
+      <div class="payout-badge">✓ 50 000 000 €+ déjà payés</div>
 
       <h1>
-        Scrollez.
-        <span>Gagnez.</span>
+        Soyez payé pour <span>scroller sur TikTok</span>
       </h1>
 
       <p class="mini-text">
-        Commencez gratuitement, choisissez une offre et gagnez des récompenses via Freecash.
+        Transformez votre temps d’écran en vraies récompenses avec Freecash.
       </p>
 
-      <div class="phone-card">
-        <div class="money-row">
-          <div class="money-box">
-            <strong>$10</strong>
-            <span>bonus de départ</span>
-          </div>
+      <div class="chips">
+        <div class="chip">⚡ Paiement rapide</div>
+        <div class="chip">🔒 Compte sécurisé</div>
+        <div class="chip">🎁 Bonus quotidiens</div>
+        <div class="chip">📱 Scroll TikTok</div>
+      </div>
 
-          <div class="money-box">
-            <strong>Retrait</strong>
-            <span>PayPal, cryptomonnaies ou cartes-cadeaux</span>
-          </div>
+      <div class="section-title">Offre recommandée</div>
+
+      <div class="offer-card">
+        <div class="play">▶</div>
+        <div>
+          <strong>Gagnez en scrollant</strong>
+          <span>Recevez des récompenses en découvrant des offres et des tâches simples.</span>
         </div>
+        <div class="hot">Hot offer</div>
+        <div class="rating"><i>★</i> 5.0</div>
+      </div>
 
-        <div class="scroll-preview">
-          <div class="task">
-            <div class="task-icon">▶</div>
-            <div>
-              <strong>Offre à parcourir</strong>
-              <span>Consultez les tâches disponibles</span>
-            </div>
-            <b>+$</b>
-          </div>
-
-          <div class="task">
-            <div class="task-icon">🎁</div>
-            <div>
-              <strong>Récompenses</strong>
-              <span>Terminez et collectez</span>
-            </div>
-            <b>Cash</b>
-          </div>
-
-          <div class="task">
-            <div class="task-icon">⚡</div>
-            <div>
-              <strong>Démarrage rapide</strong>
-              <span>Créer un compte gratuit</span>
-            </div>
-            <b>Maintenant</b>
-          </div>
-        </div>
+      <div class="tip-card">
+        <div class="tip-label">⚡ Pro tip</div>
+        <h2>Débloquez des <span>paiements plus élevés</span></h2>
+        <p>Complétez 2 à 3 offres de départ pour accéder à de meilleures récompenses et gagner encore plus.</p>
+        <div class="rainbow"></div>
       </div>
     </section>
 
     <div class="section-title">Comment ça marche</div>
 
-    <section class="steps">
-      <div class="step">
-        <div class="num">1</div>
-        <div>
-          <strong>Créez un compte gratuit</strong>
-          <span>Uniquement pour les nouveaux utilisateurs.</span>
-        </div>
+    <section class="steps-grid">
+      <div class="mini-step">
+        <span class="big">1</span>
+        <span class="icon">＋</span>
+        <strong>Choisissez une offre</strong>
+        <p>Sélectionnez une tâche disponible dans votre tableau de bord.</p>
       </div>
 
-      <div class="step">
-        <div class="num">2</div>
-        <div>
-          <strong>Choisissez une offre</strong>
-          <span>Parcourez les tâches dans votre tableau de bord.</span>
-        </div>
+      <div class="mini-step">
+        <span class="big">2</span>
+        <span class="icon">✓</span>
+        <strong>Complétez les tâches</strong>
+        <p>Débloquez de meilleurs paiements après les premières offres.</p>
       </div>
 
-      <div class="step">
-        <div class="num">3</div>
-        <div>
-          <strong>Gagnez des récompenses</strong>
-          <span>Les options de retrait peuvent varier.</span>
-        </div>
+      <div class="mini-step">
+        <span class="big">3</span>
+        <span class="icon">$</span>
+        <strong>Recevez votre argent</strong>
+        <p>Retirez vos récompenses rapidement selon les options disponibles.</p>
       </div>
     </section>
 
     <div class="cashout">
       <span>PayPal</span>
       <span>Crypto</span>
-      <span>Cartes-cadeaux</span>
+      <span>Cartes cadeaux</span>
     </div>
 
     <p class="note">
-      Les récompenses ne sont pas garanties et varient selon l’offre, l’utilisateur et la disponibilité.
+      Les récompenses ne sont pas garanties et peuvent varier selon l’offre, l’utilisateur et la disponibilité.
     </p>
 
     <footer>
@@ -617,13 +646,13 @@
   <div class="sticky">
     <a
       class="cta"
-      href="https://raintrkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiNDM1YWY5Y2Y2OGRlZGU5Y2EyNWMiLCJ0cyI6MTc4MDc2NjM1NjAwMSwiZiI6Nn0?s1=jsuttest&feb=1"
+      href="https://raintrkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiNDM1YWY5Y2Y2OGRlZGU5Y2EyNWMiLCJ0cyI6MTc4MTY5NzY3MTA1MH0?s1=franta&feb=1"
       target="_blank"
       rel="noopener noreferrer"
     >
       <span>
-        Commencer maintenant
-        <small>Scrollez & gagnez des récompenses</small>
+        Inscrivez-vous & recevez 8 € de bonus →
+        <small>Scrollez sur TikTok et gagnez des récompenses</small>
       </span>
     </a>
   </div>
